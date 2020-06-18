@@ -13,13 +13,13 @@ def generate_new_keys(key_size):
 
 def encrypt(message, pub_key):
     cipher = PKCS1_OAEP.new(pub_key)
-    print("Encrypted massage :-" + str(cipher.encrypt(message.encode('utf-8'))))
+    print("\n"+"Encrypted massage :- " + str(cipher.encrypt(message.encode('utf-8'))))
     return cipher.encrypt(message.encode('utf-8'))
 
 
 def decrypt(cipher_text, priv_key):
     cipher = PKCS1_OAEP.new(priv_key)
-    print("Decrypted massage :-" + str(cipher.decrypt(cipher_text), 'utf-8'))
+    print("\n"+"Decrypted massage :- " + str(cipher.decrypt(cipher_text), 'utf-8'))
     return cipher.decrypt(cipher_text)
 
 
