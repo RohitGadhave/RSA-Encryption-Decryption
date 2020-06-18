@@ -25,6 +25,8 @@ def decrypt(cipher_text, priv_key):
 
 public_key, private_key = generate_new_keys(2048)
 massage = input('Enter massage :- ')
+print("\n"+"public key :- "+str(public_key))
+print("\n"+"private key :- "+str(private_key))
 encrypt_msg = encrypt(massage, public_key)
 decrypt(encrypt_msg, private_key)
 
